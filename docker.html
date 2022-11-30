@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+    type="image/x-icon">
+  <title>Docker commands</title>
+</head>
+
+<body>
+  <h1 class="text-4xl text-center underline">Docker commands</h1>
+
+  <div class="container m-auto">
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">List images:</h2>
+      <div class="flex flex-col gap-2">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker images</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker image ls</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Download images:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker pull [image]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker pull [image]:[version]</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Delete images:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker image rm [image]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker image rm [image]:[version]</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Create container:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker create [container-name]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker container create [container-name]</code>
+        </div>
+        <p>it returns an id like <small>a783e16ff5a5c22eeca74a85f7af4300408cdc2fb9cfd9236f33f3be0ffd55bb</small></p>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Run container:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker start [id-container]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker start [unique-id]</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Watch run containers:</h2>
+      <div class="bg-zinc-900 text-white w-max px-4 rounded">
+        <code>docker ps</code>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Stop containers running:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker stop [id-container]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker stop a783e16ff5a5</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Watch container even if its not running:</h2>
+      <div class="bg-zinc-900 text-white w-max px-4 rounded">
+        <code>docker ps -a</code>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <h2 class="text-xl font-bold mb-3 underline">Delete container:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker rm [name | id-container]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker rm busy_goodall</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Create container assigning name:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker create --name [name] [base-project]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker create --name mymysql mysql</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Listen container logs:</h2>
+      <div class="flex flex-col gap-3">
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker logs --follow [container-name]</code>
+        </div>
+        <div class="bg-zinc-900 text-white w-max px-4 rounded">
+          <code>docker logs --follow mymysql</code>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="mt-5">
+      <h2 class="text-xl font-bold mb-3 underline">Download image, create container and run without show logs:</h2>
+      <div class="bg-zinc-900 text-white w-max px-4 rounded">
+        <code>docker run --name mymysql -p 3000:3306 -d mysql</code>
+      </div>
+    </fieldset>
+  </div>
+
+</body>
+
+</html>
