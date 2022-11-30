@@ -16,7 +16,7 @@
 
   <div class="container m-auto">
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">List images:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">List images:</h2>
       <div class="flex flex-col gap-2">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker images</code>
@@ -28,7 +28,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Download images:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Download images:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker pull [image]</code>
@@ -40,7 +40,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Delete images:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Delete images:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker image rm [image]</code>
@@ -52,7 +52,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Create container:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Create container:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker create [container-name]</code>
@@ -65,7 +65,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Run container:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Run container:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker start [id-container]</code>
@@ -77,14 +77,14 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Watch run containers:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Watch run containers:</h2>
       <div class="bg-zinc-900 text-white w-max px-4 rounded">
         <code>docker ps</code>
       </div>
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Stop containers running:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Stop containers running:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker stop [id-container]</code>
@@ -96,14 +96,14 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Watch container even if its not running:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Watch container even if its not running:</h2>
       <div class="bg-zinc-900 text-white w-max px-4 rounded">
         <code>docker ps -a</code>
       </div>
     </fieldset>
 
     <fieldset>
-      <h2 class="text-xl font-bold mb-3 underline">Delete container:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Delete container:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker rm [name | id-container]</code>
@@ -115,7 +115,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Create container assigning name:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Create container assigning name:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker create --name [name] [base-project]</code>
@@ -127,7 +127,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Listen container logs:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Listen container logs:</h2>
       <div class="flex flex-col gap-3">
         <div class="bg-zinc-900 text-white w-max px-4 rounded">
           <code>docker logs --follow [container-name]</code>
@@ -139,7 +139,7 @@
     </fieldset>
 
     <fieldset class="mt-5">
-      <h2 class="text-xl font-bold mb-3 underline">Download image, create container and run without show logs:</h2>
+      <h2 class="text-xl font-bold mt-4 underline">Download image, create container and run without show logs:</h2>
       <div class="bg-zinc-900 text-white w-max px-4 rounded">
         <code>docker run --name mymysql -p 3000:3306 -d mysql</code>
       </div>
